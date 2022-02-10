@@ -9,6 +9,8 @@ const pool = new Pool({
 
 const args = process.argv.slice(2);
 console.log('connected');
+// parameterized queries
+pool.query(queryString, values);
 
 pool.query(`SELECT DISTINCT teachers.name as teacher, cohorts.name as cohort
 FROM teachers

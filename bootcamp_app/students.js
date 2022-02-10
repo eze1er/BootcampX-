@@ -9,6 +9,8 @@ const pool = new Pool({
 
 const args = process.argv.slice(2);
 console.log(`args:  ${args}`);
+// parameterized queries
+pool.query(queryString, values);
 
 pool.query(`
 SELECT students.id as student_id, students.name as name, cohorts.name as cohort
